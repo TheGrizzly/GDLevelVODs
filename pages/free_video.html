@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GDLevel VODs</title>
+	<link rel="shortcut icon" type="image/ico" href="../img/gdlevel.png">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-social.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/GDLevelVODS.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="../js/player.js"></script>
+  	<script src="../js/mb.js"></script>
+<body>
+	<div class="cointerner-fluid">
+		<div class="row title center">
+			<div class="col-xs-5">
+			</div>
+			<div class="col-xs-2 center">
+				<a href="../index.html"><img src="../img/gdlevel2.png" class="img-responsive logo" alt="GDLevel"></a>
+			</div>
+		</div>
+	</div>
+	<div class="cointerner-fluid">
+		<div class="row">
+			<div class="center"><p class="text-title">GDLevel VODs</p></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4"></div>
+			<div class="col-xs4"><a href="#player" onclick="ChangeVideo();"><img class="thumbnail" src="../img/Regi_Nek_W17.jpg"></a></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-1 load">
+				<img src="../img/SmashBallAnimation.gif" class="loading" id="loading">
+			</div>
+			<div class="col-xs-2">
+			</div>
+			<div id="player" class="col-xs-4 player">
+				<!-- This embed code automatically includes and packages standard Player V4 plugins. If you need a different mix of plugins, please use the Advanced embed option. To see the included plugins, please refer to this doc: http://help.ooyala.com/video-platform/concepts/pbv4_release_notes.html -->
+				<script src="https://player.ooyala.com/core/8193ca94e3d54d759d99a011ba6b2b95"></script>
+				<!-- The following div will contain the instantiated player, and is identified by id -->
+				<div id='container_1523072757' class="player" ></div>
+				<!-- Player parameter modify some basic player behaviors and looks -->
+				<script>
+				  var playerParam = {
+				    'autoplay':false,
+				    'loop':false,
+				    onCreate : window.onCreate
+				  };
+				  OO.ready(function() {window.pp = OO.Player.create('container_1523072757', 'IxbDl4ZTE6Me_8TdUBC6r3U-d5s6fd8B', playerParam);});
+				</script>
+			</div>
+			<div class="col-xs-2">
+				<a href="#player" id="button-volume-down" class="btn btn-lg btn-block btn-warning buttons-player center" onclick="voldown(); unmute();"><span class="glyphicon glyphicon-volume-down"></span></a>			
+				<a href="#player" id="button-volume-up" class="btn btn-lg btn-block btn-warning buttons-player center" onclick="volup(); unmute();"><span class="glyphicon glyphicon-volume-up"></span></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">		
+			</div>
+			</div>
+			<div class="col-xs-1"></div>
+			<div class="center buttons-player">
+				<div class="row">
+					<div class="center state-img">
+					<div class="col-xs-5"></div>
+					<div class="col-xs-1">
+					<img src="../img/play.png" class="states" id="state-play">
+					</div>
+					<div class="col-xs-1"><img src="../img/pause.png" class="states" id="state-pause"></div>
+					<div class="col-xs-1"><img src="../img/muted.png" class="states" id="state-muted"></div>
+			</div>
+				</div>
+				<div class="row center"><a href="#player" id="button-pause" class="btn btn-lg btn-block btn-primary buttons-player center" onclick="pause_player();"><span class="glyphicon glyphicon-pause"></span></a></div>
+				<div class="row center"><a href="#player" id="button-play" class="btn btn-lg btn-block btn-info buttons-player center" onclick="play_player();"><span class="glyphicon glyphicon-play"></span></a></div>
+				<div class="row center"><a href="#player" id="button-mute" class="btn btn-lg btn-block btn-default buttons-player center" onclick="mute();"><span class="glyphicon glyphicon-volume-off"></span></a></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="center">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-8">
+					
+				</div>
+				<div class="col-xs-2"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="center">
+								
+			</div>
+		</div>
+	</div>
+</body>
+</html>
